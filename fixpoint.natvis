@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="FixPoint&lt;*,*&gt;">
+    <DisplayString>{ debug_ }</DisplayString>
+    <Expand>
+      <Item Name="Length">static_cast&lt;int&gt;(L)</Item>
+      <Item Name="IntegerLength">$T1</Item>
+      <Item Name="DecimalLength">$T2</Item>
+      <Item Name="Sign" Condition="positive_">"+"</Item>
+      <Item Name="Sign" Condition="!positive_">"-"</Item>
+      <Item Name="Overflow">overflow_</Item>
+      <ArrayItems>
+        <Size>L</Size>
+        <ValuePointer>d_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>
