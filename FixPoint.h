@@ -12,7 +12,7 @@ template<class T> class Compareable;
 template<uint IL, uint DL>    // integer length, decimal length
 class FixPoint : public Compareable<FixPoint<IL,DL>>
 {
-    static_assert(IL > 0, "IL must > 0"); static_assert(IL > 0, "IL must > 0");
+    static_assert(IL > 0, "IL must > 0");
     static_assert(DL > 0, "DL must > 0");
     typedef int T;        // digit value type
 public:
